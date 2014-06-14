@@ -5,6 +5,8 @@ DOMAIN="172.16.158.30"
 ADMIN_PASSWORD=`pwgen -c -n -1 12`
 echo ejabberd admin password: $ADMIN_PASSWORD
 
+sudo chown ejabberd:ejabberd /var/lib/ejabberd
+
 if [ ! -f /etc/ssl/certificate.crt ]; then
 
   #Add SSL cert/pem for ejabberd
