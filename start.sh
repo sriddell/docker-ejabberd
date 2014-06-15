@@ -10,7 +10,7 @@ sudo chown ejabberd:ejabberd /var/lib/ejabberd
 if [ ! -f /etc/ssl/certificate.crt ]; then
 
   #Add SSL cert/pem for ejabberd
-  openssl req -new -newkey rsa:4096 -days 365 -nodes -x509 -subj "/C=US/ST=Denial/L=NA/O=Dis/CN=$DOMAIN" -keyout /etc/ejabberd/certificate.key  -out /etc/ejabberd/certificate.crt
+  openssl req -new -newkey rsa:4096 -days 365 -nodes -x509 -subj "/C=US/ST=Pennsylvania/L=NA/O=Dis/CN=$DOMAIN" -keyout /etc/ejabberd/certificate.key  -out /etc/ejabberd/certificate.crt
   cat /etc/ejabberd/certificate.crt /etc/ejabberd/certificate.key > /etc/ejabberd/ejabberd.pem
 
   #Config for ejabberd
