@@ -4,6 +4,16 @@ Allows ejabberd to run in a docker container, with the mnesia database externali
 
 Before building the container, edit the start.sh script and set the DOMAIN correctly for the host that will run the docker container.
 
+Also edit the ejabberd.cfg and search for the Admin user and Hostname sections and set the hostname appropriately.
+
+```
+%% Admin user
+{acl, admin, {user, "admin", "myhost"}}.
+
+%% Hostname
+{hosts, ["myhost"]}.
+```
+
 To start it, use somthing like
 
 ```
